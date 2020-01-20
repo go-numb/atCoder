@@ -7,9 +7,9 @@ import (
 
 func main() {
 	var nWords int = 3
-	n, s, err := snippet.Scanf(nWords)
-	if err != nil {
-		fmt.Println(err)
+	n, s := snippet.Scanf(nWords)
+	if n == 0 {
+		fmt.Println("has not data")
 	}
 	fmt.Printf("length: %d, inputs: %s\n", n, s)
 }
